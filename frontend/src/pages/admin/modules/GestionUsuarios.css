@@ -1,0 +1,86 @@
+.user-counters {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  font-size: 0.88rem;
+  color: #8D6E63;
+}
+
+.user-counters .ok { color: #065f46; }
+.user-counters .no { color: #991b1b; }
+
+.users-list { display: flex; flex-direction: column; gap: 12px; }
+
+.user-card {
+  background: #fff;
+  border: 1px solid #e5d5b0;
+  border-radius: 12px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: opacity 0.2s;
+}
+
+.user-card.inactive { opacity: 0.65; }
+
+.user-avatar-lg {
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.user-avatar-lg.active { background: linear-gradient(135deg, #D4AF37, #8B6914); }
+.user-avatar-lg.gray { background: #9ca3af; }
+
+.user-details { flex: 1; }
+
+.user-name-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 4px;
+}
+
+.user-name-row strong { color: #5D4037; font-size: 0.95rem; }
+
+.rol-badge {
+  font-size: 0.72rem;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.rol-badge.purple { background: #ede9fe; color: #6d28d9; }
+.rol-badge.blue { background: #dbeafe; color: #1d4ed8; }
+.rol-badge.green { background: #d1fae5; color: #065f46; }
+.rol-badge.gray { background: #f3f4f6; color: #6b7280; }
+
+.inactivo-badge {
+  font-size: 0.72rem;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #fee2e2;
+  color: #991b1b;
+  font-weight: 600;
+}
+
+.user-details p { margin: 2px 0; font-size: 0.85rem; color: #8D6E63; }
+.fecha-creacion { font-size: 0.78rem !important; }
+
+.user-actions { display: flex; align-items: center; gap: 8px; }
+
+.toggle-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.user-edit-form { width: 100%; }

@@ -1,0 +1,221 @@
+﻿.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 40px;
+  background: rgba(10,6,8,0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(212,175,55,0.15);
+  box-shadow: 0 2px 24px rgba(93,64,55,0.08);
+  transition: all 0.3s;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.navbar-logo {
+  height: 56px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 8px rgba(212,175,55,0.4)) brightness(1.1);
+  transition: transform 0.3s;
+}
+
+.navbar-brand:hover .navbar-logo {
+  transform: scale(1.06);
+}
+
+.brand-name {
+  display: block;
+  color: #D4AF37;
+  font-size: 1.1rem;
+  font-weight: bold;
+  font-family: "Cormorant Garamond", "Georgia", serif;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+
+.brand-sub {
+  display: block;
+  color: rgba(255,255,255,0.45);
+  font-size: 0.72rem;
+  font-style: italic;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-link {
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-family: "Crimson Text", "Georgia", serif;
+  position: relative;
+  padding-bottom: 3px;
+  transition: color 0.2s;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 0; height: 2px;
+  background: linear-gradient(to right, #D4AF37, #8B6914);
+  transition: width 0.3s cubic-bezier(0.4,0,0.2,1);
+  border-radius: 2px;
+}
+
+.nav-link:hover::after { width: 100%; }
+.nav-link:hover { color: #D4AF37; }
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn-outline {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 20px;
+  border: 2px solid #D4AF37;
+  color: #8B6914;
+  background: transparent;
+  border-radius: 999px;
+  font-family: "Crimson Text", "Georgia", serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+.btn-outline:hover {
+  background: #D4AF37;
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(212,175,55,0.35);
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 20px;
+  background: linear-gradient(135deg, #D4AF37, #8B6914);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  font-family: "Crimson Text", "Georgia", serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.25s;
+  box-shadow: 0 4px 14px rgba(212,175,55,0.35);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(212,175,55,0.5);
+}
+
+/* ── User pill (autenticado en Home) ── */
+.user-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(212,175,55,0.12);
+  border: 1px solid rgba(212,175,55,0.3);
+  border-radius: 999px;
+  padding: 6px 14px 6px 6px;
+}
+
+.user-pill-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #D4AF37, #8B6914);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.user-pill span {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.9);
+  font-weight: 600;
+  font-family: 'Crimson Text', serif;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.bar {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #5D4037;
+  border-radius: 2px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 72px; left: 0; right: 0;
+  z-index: 99;
+  background: rgba(255,248,220,0.97);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(212,175,55,0.15);
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 8px 32px rgba(93,64,55,0.12);
+}
+
+.mobile-link {
+  color: #5D4037;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: "Crimson Text", serif;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(212,175,55,0.15);
+  transition: color 0.2s, padding-left 0.2s;
+}
+
+.mobile-link:hover { color: #8B6914; padding-left: 8px; }
+
+@media (max-width: 768px) {
+  .navbar { padding: 12px 20px; }
+  .desktop-only { display: none !important; }
+  .mobile-only { display: flex !important; }
+  .hamburger { display: flex; }
+}
+
+@media (min-width: 769px) {
+  .mobile-only { display: none !important; }
+}
+

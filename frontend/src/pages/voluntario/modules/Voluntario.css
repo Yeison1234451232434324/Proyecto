@@ -1,0 +1,206 @@
+/* Eventos voluntario */
+.eventos-vol-list { display: flex; flex-direction: column; gap: 20px; }
+
+.evento-vol-card {
+  background: #fff;
+  border: 1px solid #e5d5b0;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 2px 10px rgba(93,64,55,0.07);
+}
+
+.ev-vol-header h4 {
+  font-family: 'Georgia', serif;
+  color: #5D4037;
+  font-size: 1.1rem;
+  margin: 0 0 10px;
+}
+
+.ev-vol-meta { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 8px; }
+.ev-vol-meta span { font-size: 0.85rem; color: #8D6E63; }
+.ev-vol-desc { color: #8D6E63; font-size: 0.88rem; margin: 8px 0 0; }
+
+.ev-vol-progress { margin: 16px 0; }
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 0.85rem;
+  color: #5D4037;
+}
+
+.alerta-vol { color: #92400e; font-size: 0.82rem; }
+.completo-vol { color: #065f46; font-size: 0.82rem; }
+
+.progress-bar {
+  height: 10px;
+  background: #e5d5b0;
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid rgba(139,105,20,0.15);
+}
+
+.progress-bar.sm { height: 6px; margin-top: 8px; }
+
+.progress-fill {
+  height: 100%;
+  min-width: 4px;
+  background: linear-gradient(to right, #D4AF37, #8B6914);
+  border-radius: 999px;
+  transition: width 0.6s ease;
+}
+
+.progress-fill.full { background: linear-gradient(to right, #10B981, #059669); }
+
+.ev-vol-actions { display: flex; gap: 12px; margin-top: 16px; }
+
+.disp-btn {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px solid;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: 'Georgia', serif;
+}
+
+.disp-btn.disponible {
+  border-color: #10B981;
+  color: #065f46;
+  background: transparent;
+}
+
+.disp-btn.disponible.selected { background: #10B981; color: #fff; }
+.disp-btn.disponible:hover:not(:disabled) { background: #d1fae5; }
+.disp-btn.disponible:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.disp-btn.no-disponible {
+  border-color: #ef4444;
+  color: #991b1b;
+  background: transparent;
+}
+
+.disp-btn.no-disponible.selected { background: #ef4444; color: #fff; }
+.disp-btn.no-disponible:hover { background: #fee2e2; }
+
+.disp-confirm {
+  margin-top: 12px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.disp-confirm.si { background: #d1fae5; color: #065f46; }
+.disp-confirm.no { background: #fee2e2; color: #991b1b; }
+
+/* Actividades agrupadas */
+.progress-global { margin-bottom: 28px; }
+
+.grupo-evento {
+  background: #fff;
+  border: 1px solid #e5d5b0;
+  border-radius: 14px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.grupo-header { margin-bottom: 16px; }
+.grupo-header h3 { font-family: 'Georgia', serif; color: #5D4037; margin: 0 0 8px; }
+.grupo-meta { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 8px; }
+.grupo-meta span { font-size: 0.82rem; color: #8D6E63; }
+.grupo-counter { color: #8B6914 !important; font-weight: 600; }
+
+.completada-tag { color: #065f46; font-size: 0.78rem; font-weight: 600; }
+
+/* Calificaciones */
+.cal-resumen {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.cal-stat-card {
+  background: #fff;
+  border: 1px solid #e5d5b0;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.cal-stat-val {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #5D4037;
+  line-height: 1;
+}
+
+.cal-stat-val.nivel { font-size: 1.2rem; color: #D4AF37; }
+.cal-stat-sub { font-size: 0.75rem; color: #8D6E63; }
+.cal-stat-label { font-size: 0.8rem; color: #8D6E63; }
+
+.estrellas { display: flex; gap: 2px; }
+.star-filled { color: #D4AF37; font-size: 1.1rem; }
+.star-empty { color: #d1d5db; font-size: 1.1rem; }
+
+.cal-list { display: flex; flex-direction: column; gap: 16px; }
+
+.cal-card {
+  background: #fff;
+  border: 1px solid #e5d5b0;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(93,64,55,0.06);
+}
+
+.cal-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 14px;
+  gap: 16px;
+}
+
+.cal-card-header h4 { font-family: 'Georgia', serif; color: #5D4037; margin: 0 0 4px; }
+.cal-card-header p { color: #8D6E63; font-size: 0.85rem; margin: 0; }
+
+.cal-score { text-align: right; }
+.cal-score span { display: block; font-size: 0.82rem; color: #8D6E63; margin-top: 4px; }
+
+.cal-comentario {
+  background: #f5f5f5;
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 14px;
+}
+
+.cal-comentario p { color: #5D4037; font-size: 0.9rem; font-style: italic; margin: 0; }
+
+.cal-evaluador {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.eval-avatar {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #D4AF37, #8B6914);
+  color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: bold;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.cal-evaluador p { margin: 0; font-size: 0.88rem; color: #5D4037; font-weight: 600; }
+.cal-evaluador span { font-size: 0.78rem; color: #8D6E63; }

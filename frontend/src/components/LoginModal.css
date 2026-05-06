@@ -1,0 +1,375 @@
+/* ── Backdrop ── */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(62,39,35,0.6);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  z-index: 200;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  width: 4px; height: 4px;
+  background: radial-gradient(circle, #f5d76e, #D4AF37);
+  border-radius: 50%;
+  box-shadow: 0 0 6px rgba(212,175,55,0.5);
+}
+
+/* ── Wrapper ── */
+.modal-wrapper {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 201;
+  padding: 16px;
+  pointer-events: none;
+}
+
+/* ── Box ── */
+.modal-box {
+  background: #fff;
+  border-radius: 28px;
+  box-shadow: 0 32px 80px rgba(62,39,35,0.3), 0 0 0 1px rgba(212,175,55,0.12);
+  max-width: 420px;
+  width: 100%;
+  overflow: hidden;
+  pointer-events: all;
+}
+
+/* ══════════════════════════════════════
+   HERO ILUSTRATIVO
+══════════════════════════════════════ */
+.modal-hero {
+  position: relative;
+  height: 220px;
+  background: linear-gradient(180deg, #1a2a4a 0%, #2d4a7a 30%, #4a7a5a 65%, #6aaa6a 100%);
+  overflow: hidden;
+}
+
+/* Cielo estrellado */
+.modal-sky {
+  position: absolute;
+  inset: 0;
+}
+
+.star-dot {
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 4px rgba(255,255,255,0.8);
+}
+
+/* Sol/Luna */
+.modal-sun {
+  position: absolute;
+  width: 64px; height: 64px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #fff8dc 0%, #f5d76e 50%, #D4AF37 100%);
+  top: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow:
+    0 0 0 8px rgba(245,215,110,0.15),
+    0 0 0 20px rgba(212,175,55,0.08),
+    0 0 40px rgba(245,215,110,0.4);
+}
+
+/* Colinas */
+.modal-hills {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+}
+
+.hill {
+  position: absolute;
+  bottom: 0;
+  border-radius: 50% 50% 0 0;
+}
+
+.hill-back {
+  width: 140%; height: 90px;
+  left: -20%;
+  background: #2d5a3a;
+  bottom: 20px;
+}
+
+.hill-mid {
+  width: 80%; height: 70px;
+  left: -5%;
+  background: #3a7a4a;
+}
+
+.hill-front {
+  width: 70%; height: 55px;
+  right: -5%;
+  background: #4a8a5a;
+}
+
+/* Cruz */
+.modal-cross {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+}
+
+.cross-v {
+  width: 6px; height: 44px;
+  background: rgba(255,255,255,0.9);
+  border-radius: 3px;
+  margin: 0 auto;
+  box-shadow: 0 0 12px rgba(255,255,255,0.5);
+}
+
+.cross-h {
+  width: 28px; height: 6px;
+  background: rgba(255,255,255,0.9);
+  border-radius: 3px;
+  margin-top: -30px;
+  box-shadow: 0 0 12px rgba(255,255,255,0.5);
+}
+
+/* Texto hero */
+.modal-hero-text {
+  position: absolute;
+  top: 16px;
+  left: 0; right: 0;
+  text-align: center;
+  z-index: 4;
+}
+
+.modal-hero-text h2 {
+  font-family: 'Cormorant Garamond', 'Georgia', serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0 0 4px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.modal-hero-text p {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.7);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+}
+
+/* Cerrar */
+.modal-close {
+  position: absolute;
+  top: 12px; right: 12px;
+  background: rgba(0,0,0,0.25);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+  width: 30px; height: 30px;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  z-index: 10;
+}
+
+.modal-close:hover {
+  background: rgba(0,0,0,0.45);
+  transform: rotate(90deg);
+}
+
+/* ══════════════════════════════════════
+   FORMULARIO
+══════════════════════════════════════ */
+.modal-body {
+  padding: 28px 32px 32px;
+  background: #fff;
+}
+
+.modal-login-title {
+  font-family: 'Cormorant Garamond', 'Georgia', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #3E2723;
+  text-align: center;
+  margin-bottom: 22px;
+  letter-spacing: 0.5px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Campo con ícono */
+.login-field {
+  display: flex;
+  align-items: center;
+  background: #f5f0e8;
+  border: 2px solid transparent;
+  border-radius: 999px;
+  padding: 0 16px;
+  transition: all 0.2s;
+  gap: 10px;
+}
+
+.login-field:focus-within {
+  border-color: #D4AF37;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(212,175,55,0.1);
+}
+
+.lf-icon {
+  font-size: 1rem;
+  flex-shrink: 0;
+  opacity: 0.6;
+}
+
+.login-field input {
+  flex: 1;
+  padding: 13px 0;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 0.95rem;
+  color: #3E2723;
+  font-family: 'Crimson Text', 'Georgia', serif;
+  font-size: 1rem;
+}
+
+.login-field input::placeholder {
+  color: #b0956e;
+}
+
+.show-pass-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+  padding: 0;
+  opacity: 0.5;
+  transition: opacity 0.2s;
+  flex-shrink: 0;
+}
+
+.show-pass-btn:hover { opacity: 1; }
+
+/* Error */
+.form-error {
+  color: #c0392b;
+  font-size: 0.85rem;
+  text-align: center;
+  background: #fdecea;
+  border: 1px solid #f5c6c2;
+  border-radius: 10px;
+  padding: 10px 14px;
+  margin: 0;
+}
+
+/* Botón */
+.btn-submit {
+  padding: 14px;
+  background: linear-gradient(135deg, #D4AF37 0%, #8B6914 100%);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(212,175,55,0.4);
+  transition: all 0.25s;
+  letter-spacing: 2px;
+  margin-top: 4px;
+}
+
+.btn-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(212,175,55,0.5);
+}
+
+.btn-submit:active { transform: translateY(0); }
+.btn-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+
+/* Nota */
+.login-note {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #8D6E63;
+  margin: 0;
+  font-style: italic;
+  font-family: 'Crimson Text', serif;
+}
+
+/* ── Recuperar contraseña ── */
+.link-recuperar {
+  background: none;
+  border: none;
+  color: #8B6914;
+  font-size: 0.88rem;
+  cursor: pointer;
+  text-align: center;
+  font-family: 'Crimson Text', serif;
+  font-style: italic;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s;
+  padding: 0;
+}
+
+.link-recuperar:hover { color: #D4AF37; }
+
+.rec-desc {
+  text-align: center;
+  color: #8D6E63;
+  font-size: 0.92rem;
+  font-family: 'Crimson Text', serif;
+  font-style: italic;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* ── Enviado ── */
+.enviado-wrap {
+  text-align: center;
+  padding: 8px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.enviado-icon {
+  font-size: 3.5rem;
+  animation: bounce 1s ease infinite alternate;
+}
+
+@keyframes bounce {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-8px); }
+}
+
+.enviado-wrap h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  color: #3E2723;
+  margin: 0;
+}
+
+.enviado-wrap p {
+  color: #8D6E63;
+  font-size: 0.92rem;
+  font-family: 'Crimson Text', serif;
+  line-height: 1.6;
+  max-width: 300px;
+  margin: 0;
+}
+
+.enviado-wrap strong { color: #5D4037; }

@@ -1,0 +1,24 @@
+.panel-layout {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #FFF8DC 0%, #FAEBD7 100%);
+}
+
+.panel-main {
+  flex: 1;
+  transition: margin-left 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  min-height: 100vh;
+}
+
+.panel-main.with-sidebar { margin-left: 288px; }
+
+.panel-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 80px 36px 56px;
+}
+
+@media (max-width: 768px) {
+  .panel-main.with-sidebar { margin-left: 0; }
+  .panel-content { padding: 72px 16px 40px; }
+}
