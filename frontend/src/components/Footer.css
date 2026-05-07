@@ -1,5 +1,5 @@
-.footer {
-  background: linear-gradient(135deg, #5D4037 0%, #3E2723 100%);
+﻿.footer {
+  background: linear-gradient(135deg, #0B1A2E 0%, #071020 100%);
   color: #f5ede0;
   padding: 64px 40px 28px;
   position: relative;
@@ -10,7 +10,7 @@
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 3px;
-  background: linear-gradient(to right, transparent, #D4AF37, transparent);
+  background: linear-gradient(to right, transparent, #C9A84C, transparent);
 }
 
 .footer-grid {
@@ -67,12 +67,12 @@
   transition: background 0.2s;
 }
 
-.social-btn:hover { background: #D4AF37; }
+.social-btn:hover { background: #C9A84C; }
 
 .footer-col-title {
   font-family: 'Georgia', serif;
   font-size: 1.2rem;
-  color: #D4AF37;
+  color: #C9A84C;
   margin-bottom: 20px;
 }
 
@@ -99,7 +99,7 @@
   margin: 0;
 }
 
-.contact-item a:hover { color: #D4AF37; }
+.contact-item a:hover { color: #C9A84C; }
 
 .horarios-list {
   list-style: none;
@@ -120,7 +120,7 @@
 }
 
 .hora {
-  color: #D4AF37;
+  color: #C9A84C;
   font-weight: bold;
   white-space: nowrap;
   margin-left: 12px;
@@ -135,7 +135,7 @@
 }
 
 .footer-verse {
-  color: #D4AF37;
+  color: #C9A84C;
   font-style: italic;
   margin-top: 6px;
   font-size: 0.9rem;
@@ -145,3 +145,4 @@
   .footer { padding: 48px 20px 24px; }
   .footer-grid { gap: 32px; }
 }
+

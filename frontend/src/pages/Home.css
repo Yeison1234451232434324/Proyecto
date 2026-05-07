@@ -1,16 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap');
 
 :root {
-  --gold: #D4AF37;
-  --gold-dark: #8B6914;
-  --gold-light: #f0d060;
-  --brown: #5D4037;
-  --brown-dark: #3E2723;
-  --cream: #FFF8DC;
-  --cream2: #FAEBD7;
-  --cream3: #F5E6C8;
-  --text: #3E2723;
-  --text-muted: #8D6E63;
+  /* Paleta principal — azul noche + dorado */
+  --navy:       #0B1A2E;
+  --navy-mid:   #112240;
+  --navy-light: #1B3A6B;
+  --blue:       #1E4D8C;
+  --blue-light: #2E6DB4;
+  --gold:       #C9A84C;
+  --gold-light: #E8C96A;
+  --gold-pale:  #F5E6B0;
+  --cream:      #F8F4EC;
+  --cream2:     #EEE8D8;
+  --white:      #FFFFFF;
+  --text:       #0B1A2E;
+  --text-muted: #4A6080;
 }
 
 /* ── Base ── */
@@ -48,7 +52,7 @@
   inset: -5%;
   background: url('https://images.unsplash.com/photo-1769590280436-41d1e2252e50?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1920')
     center / cover no-repeat;
-  filter: brightness(0.45) saturate(0.7);
+  filter: brightness(0.35) saturate(0.6);
   animation: heroZoom 18s ease-in-out infinite alternate;
 }
 
@@ -61,8 +65,11 @@
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 70% 50% at 50% 100%, rgba(212,175,55,0.2) 0%, transparent 70%),
-    linear-gradient(to bottom, rgba(62,39,35,0.2) 0%, rgba(62,39,35,0.55) 60%, rgba(62,39,35,0.88) 100%);
+    radial-gradient(ellipse 70% 50% at 50% 100%, rgba(30,77,140,0.35) 0%, transparent 70%),
+    linear-gradient(to bottom,
+      rgba(11,26,46,0.3) 0%,
+      rgba(11,26,46,0.6) 55%,
+      rgba(11,26,46,0.92) 100%);
 }
 
 .hero::after {
@@ -70,17 +77,17 @@
   position: absolute;
   bottom: 0; left: 0; right: 0;
   height: 1px;
-  background: linear-gradient(to right, transparent, rgba(212,175,55,0.5), transparent);
+  background: linear-gradient(to right, transparent, rgba(201,168,76,0.6), transparent);
 }
 
 .hero-particle {
   position: absolute;
   bottom: 0;
   width: 3px; height: 3px;
-  background: radial-gradient(circle, #f5d76e, #D4AF37);
+  background: radial-gradient(circle, var(--gold-light), var(--gold));
   border-radius: 50%;
   pointer-events: none;
-  box-shadow: 0 0 6px rgba(212,175,55,0.7);
+  box-shadow: 0 0 6px rgba(201,168,76,0.7);
 }
 
 .hero-circle {
@@ -91,14 +98,14 @@
 
 .hero-circle-1 {
   width: 560px; height: 560px;
-  border: 1px solid rgba(212,175,55,0.12);
+  border: 1px solid rgba(201,168,76,0.1);
   top: 50%; left: 50%;
   transform: translate(-50%, -50%);
 }
 
 .hero-circle-2 {
   width: 820px; height: 820px;
-  border: 1px solid rgba(212,175,55,0.06);
+  border: 1px solid rgba(201,168,76,0.05);
   top: 50%; left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -114,12 +121,12 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(255,248,220,0.12);
-  border: 1px solid rgba(212,175,55,0.4);
+  background: rgba(201,168,76,0.12);
+  border: 1px solid rgba(201,168,76,0.35);
   border-radius: 999px;
   padding: 7px 20px;
   font-size: 0.72rem;
-  color: #f5d76e;
+  color: var(--gold-light);
   letter-spacing: 2.5px;
   text-transform: uppercase;
   margin-bottom: 28px;
@@ -131,7 +138,7 @@
 .hero-badge-dot {
   width: 6px; height: 6px;
   border-radius: 50%;
-  background: #D4AF37;
+  background: var(--gold);
   animation: pulse 2s ease-in-out infinite;
 }
 
@@ -152,7 +159,7 @@
 
 .hero-brand {
   display: block;
-  background: linear-gradient(135deg, #fff8dc 0%, #f5d76e 40%, #D4AF37 100%);
+  background: linear-gradient(135deg, #fff 0%, var(--gold-light) 40%, var(--gold) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -163,7 +170,7 @@
 .hero-verse {
   font-family: 'Crimson Text', serif;
   font-size: clamp(1rem, 2vw, 1.2rem);
-  color: rgba(255,255,255,0.78);
+  color: rgba(255,255,255,0.75);
   font-style: italic;
   max-width: 560px;
   margin: 24px auto 12px;
@@ -172,7 +179,7 @@
 
 .hero-ref {
   font-family: 'Inter', sans-serif;
-  color: #D4AF37;
+  color: var(--gold);
   font-size: 0.78rem;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -189,21 +196,21 @@
 
 .scroll-line {
   width: 1px; height: 44px;
-  background: linear-gradient(to bottom, rgba(212,175,55,0.8), transparent);
+  background: linear-gradient(to bottom, rgba(201,168,76,0.8), transparent);
   animation: scrollAnim 2s ease-in-out infinite;
 }
 
 @keyframes scrollAnim {
-  0% { transform: scaleY(0); transform-origin: top; opacity: 1; }
-  49% { transform: scaleY(1); transform-origin: top; opacity: 1; }
-  50% { transform: scaleY(1); transform-origin: bottom; opacity: 1; }
+  0%   { transform: scaleY(0); transform-origin: top; opacity: 1; }
+  49%  { transform: scaleY(1); transform-origin: top; opacity: 1; }
+  50%  { transform: scaleY(1); transform-origin: bottom; opacity: 1; }
   100% { transform: scaleY(0); transform-origin: bottom; opacity: 0; }
 }
 
 .scroll-label {
   font-size: 0.65rem;
   letter-spacing: 3px;
-  color: rgba(212,175,55,0.55);
+  color: rgba(201,168,76,0.55);
   text-transform: uppercase;
   font-family: 'Inter', sans-serif;
 }
@@ -226,7 +233,7 @@ section { padding: 96px 0; }
   font-size: 0.7rem;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: var(--gold-dark);
+  color: var(--blue-light);
   margin-bottom: 14px;
   font-weight: 600;
 }
@@ -235,18 +242,18 @@ section { padding: 96px 0; }
 .section-eyebrow::after {
   content: '';
   width: 28px; height: 1px;
-  background: linear-gradient(to right, transparent, var(--gold));
+  background: linear-gradient(to right, transparent, var(--blue-light));
 }
 
 .section-eyebrow::after {
-  background: linear-gradient(to left, transparent, var(--gold));
+  background: linear-gradient(to left, transparent, var(--blue-light));
 }
 
 .section-header h2 {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(2rem, 4.5vw, 3rem);
   font-weight: 600;
-  color: var(--text);
+  color: var(--navy);
   line-height: 1.15;
   margin-bottom: 12px;
 }
@@ -263,7 +270,7 @@ section { padding: 96px 0; }
 
 /* Skeleton */
 .skeleton-card {
-  background: linear-gradient(90deg, var(--cream2) 25%, var(--cream3) 50%, var(--cream2) 75%);
+  background: linear-gradient(90deg, var(--cream2) 25%, #e0d8c8 50%, var(--cream2) 75%);
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite;
   border-radius: 20px;
@@ -278,10 +285,10 @@ section { padding: 96px 0; }
 }
 
 /* ══════════════════════════════════════
-   ORACION
+   ORACION — Azul marino con acento dorado
 ══════════════════════════════════════ */
 .oracion-section {
-  background: linear-gradient(135deg, var(--cream2) 0%, var(--cream) 50%, var(--cream2) 100%);
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 50%, var(--navy-light) 100%);
   position: relative;
   overflow: hidden;
 }
@@ -291,8 +298,8 @@ section { padding: 96px 0; }
   position: absolute;
   top: 50%; left: 50%;
   transform: translate(-50%, -50%);
-  width: 500px; height: 300px;
-  background: radial-gradient(ellipse, rgba(212,175,55,0.1) 0%, transparent 70%);
+  width: 600px; height: 400px;
+  background: radial-gradient(ellipse, rgba(201,168,76,0.08) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -304,19 +311,43 @@ section { padding: 96px 0; }
 
 .deco-ring-tr {
   width: 220px; height: 220px;
-  border: 1px solid rgba(212,175,55,0.15);
+  border: 1px solid rgba(201,168,76,0.12);
   top: 20px; right: 60px;
 }
 
 .deco-ring-bl {
   width: 160px; height: 160px;
-  border: 1px solid rgba(212,175,55,0.1);
+  border: 1px solid rgba(201,168,76,0.08);
   bottom: 40px; left: 60px;
 }
 
+/* Títulos de sección en fondo oscuro */
+.oracion-section .section-eyebrow {
+  color: var(--gold-light);
+}
+
+.oracion-section .section-eyebrow::before,
+.oracion-section .section-eyebrow::after {
+  background: linear-gradient(to right, transparent, var(--gold));
+}
+
+.oracion-section .section-eyebrow::after {
+  background: linear-gradient(to left, transparent, var(--gold));
+}
+
+.oracion-section .section-header h2 {
+  color: #fff;
+}
+
+.oracion-section .section-sub {
+  color: rgba(255,255,255,0.6);
+}
+
 .oracion-card {
-  background: #fff;
-  border: 1px solid rgba(212,175,55,0.2);
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(201,168,76,0.2);
   border-radius: 24px;
   padding: 52px 60px;
   max-width: 760px;
@@ -324,7 +355,7 @@ section { padding: 96px 0; }
   text-align: center;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 8px 48px rgba(93,64,55,0.1), 0 2px 8px rgba(212,175,55,0.08);
+  box-shadow: 0 8px 48px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.06);
 }
 
 .corner {
@@ -335,15 +366,15 @@ section { padding: 96px 0; }
 
 .corner-tl {
   top: 0; left: 0;
-  border-top: 2px solid rgba(212,175,55,0.5);
-  border-left: 2px solid rgba(212,175,55,0.5);
+  border-top: 2px solid rgba(201,168,76,0.5);
+  border-left: 2px solid rgba(201,168,76,0.5);
   border-radius: 24px 0 0 0;
 }
 
 .corner-br {
   bottom: 0; right: 0;
-  border-bottom: 2px solid rgba(212,175,55,0.5);
-  border-right: 2px solid rgba(212,175,55,0.5);
+  border-bottom: 2px solid rgba(201,168,76,0.5);
+  border-right: 2px solid rgba(201,168,76,0.5);
   border-radius: 0 0 24px 0;
 }
 
@@ -363,7 +394,7 @@ section { padding: 96px 0; }
   font-family: 'Crimson Text', serif;
   font-size: clamp(1.1rem, 2vw, 1.3rem);
   line-height: 2;
-  color: var(--text);
+  color: rgba(255,255,255,0.88);
   font-style: italic;
   margin-bottom: 20px;
   position: relative;
@@ -374,7 +405,7 @@ section { padding: 96px 0; }
   content: '\201C';
   font-family: 'Cormorant Garamond', serif;
   font-size: 6rem;
-  color: rgba(212,175,55,0.12);
+  color: rgba(201,168,76,0.12);
   position: absolute;
   top: -24px; left: -12px;
   line-height: 1;
@@ -382,7 +413,7 @@ section { padding: 96px 0; }
 }
 
 .oracion-versiculo {
-  color: var(--gold-dark);
+  color: var(--gold-light);
   font-size: 0.9rem;
   margin-bottom: 18px;
   letter-spacing: 0.5px;
@@ -390,7 +421,7 @@ section { padding: 96px 0; }
 
 .amen {
   display: inline-block;
-  color: var(--gold-dark);
+  color: var(--gold);
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.3rem;
   font-weight: 600;
@@ -398,7 +429,7 @@ section { padding: 96px 0; }
 }
 
 /* ══════════════════════════════════════
-   NOTICIAS
+   NOTICIAS — Crema clara
 ══════════════════════════════════════ */
 .noticias-section {
   background: var(--cream);
@@ -411,19 +442,19 @@ section { padding: 96px 0; }
 }
 
 .noticia-card {
-  background: #fff;
-  border: 1px solid rgba(212,175,55,0.15);
+  background: var(--white);
+  border: 1px solid rgba(30,77,140,0.1);
   border-radius: 20px;
   overflow: hidden;
   cursor: pointer;
   transition: all 0.35s cubic-bezier(0.4,0,0.2,1);
-  box-shadow: 0 4px 20px rgba(93,64,55,0.07);
+  box-shadow: 0 4px 20px rgba(11,26,46,0.07);
 }
 
 .noticia-card:hover {
-  border-color: rgba(212,175,55,0.4);
+  border-color: rgba(201,168,76,0.4);
   transform: translateY(-8px);
-  box-shadow: 0 20px 48px rgba(93,64,55,0.14);
+  box-shadow: 0 20px 48px rgba(11,26,46,0.14);
 }
 
 .noticia-img-wrap {
@@ -446,7 +477,7 @@ section { padding: 96px 0; }
 .noticia-img-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(62,39,35,0.5) 0%, transparent 60%);
+  background: linear-gradient(to top, rgba(11,26,46,0.55) 0%, transparent 60%);
 }
 
 .noticia-body {
@@ -457,7 +488,7 @@ section { padding: 96px 0; }
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.35rem;
   font-weight: 600;
-  color: var(--text);
+  color: var(--navy);
   margin-bottom: 10px;
   line-height: 1.3;
 }
@@ -473,19 +504,19 @@ section { padding: 96px 0; }
 .noticia-meta {
   display: flex;
   gap: 16px;
-  font-size: 0.8rem;
-  color: var(--gold-dark);
-  border-top: 1px solid rgba(212,175,55,0.15);
+  font-size: 0.78rem;
+  color: var(--blue-light);
+  border-top: 1px solid rgba(30,77,140,0.1);
   padding-top: 14px;
   font-family: 'Inter', sans-serif;
   font-weight: 500;
 }
 
 /* ══════════════════════════════════════
-   EVENTOS
+   EVENTOS — Azul suave
 ══════════════════════════════════════ */
 .eventos-section {
-  background: var(--cream2);
+  background: linear-gradient(180deg, var(--cream2) 0%, #e4ddd0 100%);
 }
 
 .eventos-grid {
@@ -495,19 +526,19 @@ section { padding: 96px 0; }
 }
 
 .evento-card {
-  background: #fff;
-  border: 1px solid rgba(212,175,55,0.15);
+  background: var(--white);
+  border: 1px solid rgba(30,77,140,0.1);
   border-radius: 20px;
   overflow: hidden;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
-  box-shadow: 0 4px 16px rgba(93,64,55,0.07);
+  box-shadow: 0 4px 16px rgba(11,26,46,0.07);
 }
 
 .evento-card:hover {
-  border-color: rgba(212,175,55,0.4);
+  border-color: rgba(201,168,76,0.4);
   transform: translateY(-6px);
-  box-shadow: 0 16px 40px rgba(93,64,55,0.13);
+  box-shadow: 0 16px 40px rgba(11,26,46,0.13);
 }
 
 .evento-bar {
@@ -523,7 +554,7 @@ section { padding: 96px 0; }
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.5rem;
   font-weight: 600;
-  color: var(--text);
+  color: var(--navy);
   margin-bottom: 18px;
   line-height: 1.2;
 }

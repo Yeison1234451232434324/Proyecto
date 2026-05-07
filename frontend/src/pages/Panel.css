@@ -1,7 +1,7 @@
-.panel-layout {
+﻿.panel-layout {
   display: flex;
   min-height: 100vh;
-  background: linear-gradient(135deg, #FFF8DC 0%, #FAEBD7 100%);
+  background: linear-gradient(135deg, #EEF3F8 0%, #E4EDF5 100%);
 }
 
 .panel-main {
@@ -22,3 +22,4 @@
   .panel-main.with-sidebar { margin-left: 0; }
   .panel-content { padding: 72px 16px 40px; }
 }
+

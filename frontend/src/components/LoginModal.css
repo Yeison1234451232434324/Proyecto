@@ -1,8 +1,8 @@
-/* ── Backdrop ── */
+﻿/* â”€â”€ Backdrop â”€â”€ */
 .modal-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(62,39,35,0.6);
+  background: rgba(11,26,46,0.6);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   z-index: 200;
@@ -12,12 +12,12 @@
 .particle {
   position: absolute;
   width: 4px; height: 4px;
-  background: radial-gradient(circle, #f5d76e, #D4AF37);
+  background: radial-gradient(circle, #f5d76e, #C9A84C);
   border-radius: 50%;
-  box-shadow: 0 0 6px rgba(212,175,55,0.5);
+  box-shadow: 0 0 6px rgba(201,168,76,0.5);
 }
 
-/* ── Wrapper ── */
+/* â”€â”€ Wrapper â”€â”€ */
 .modal-wrapper {
   position: fixed;
   inset: 0;
@@ -29,20 +29,20 @@
   pointer-events: none;
 }
 
-/* ── Box ── */
+/* â”€â”€ Box â”€â”€ */
 .modal-box {
   background: #fff;
   border-radius: 28px;
-  box-shadow: 0 32px 80px rgba(62,39,35,0.3), 0 0 0 1px rgba(212,175,55,0.12);
+  box-shadow: 0 32px 80px rgba(11,26,46,0.3), 0 0 0 1px rgba(201,168,76,0.12);
   max-width: 420px;
   width: 100%;
   overflow: hidden;
   pointer-events: all;
 }
 
-/* ══════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    HERO ILUSTRATIVO
-══════════════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 .modal-hero {
   position: relative;
   height: 220px;
@@ -68,13 +68,13 @@
   position: absolute;
   width: 64px; height: 64px;
   border-radius: 50%;
-  background: radial-gradient(circle, #fff8dc 0%, #f5d76e 50%, #D4AF37 100%);
+  background: radial-gradient(circle, #fff8dc 0%, #f5d76e 50%, #C9A84C 100%);
   top: 28px;
   left: 50%;
   transform: translateX(-50%);
   box-shadow:
     0 0 0 8px rgba(245,215,110,0.15),
-    0 0 0 20px rgba(212,175,55,0.08),
+    0 0 0 20px rgba(201,168,76,0.08),
     0 0 40px rgba(245,215,110,0.4);
 }
 
@@ -184,9 +184,9 @@
   transform: rotate(90deg);
 }
 
-/* ══════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    FORMULARIO
-══════════════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 .modal-body {
   padding: 28px 32px 32px;
   background: #fff;
@@ -196,7 +196,7 @@
   font-family: 'Cormorant Garamond', 'Georgia', serif;
   font-size: 1.5rem;
   font-weight: 700;
-  color: #3E2723;
+  color: #0B1A2E;
   text-align: center;
   margin-bottom: 22px;
   letter-spacing: 0.5px;
@@ -208,11 +208,11 @@
   gap: 14px;
 }
 
-/* Campo con ícono */
+/* Campo con Ã­cono */
 .login-field {
   display: flex;
   align-items: center;
-  background: #f5f0e8;
+  background: #EEF3F8;
   border: 2px solid transparent;
   border-radius: 999px;
   padding: 0 16px;
@@ -221,9 +221,9 @@
 }
 
 .login-field:focus-within {
-  border-color: #D4AF37;
+  border-color: #C9A84C;
   background: #fff;
-  box-shadow: 0 0 0 4px rgba(212,175,55,0.1);
+  box-shadow: 0 0 0 4px rgba(201,168,76,0.1);
 }
 
 .lf-icon {
@@ -239,13 +239,13 @@
   border: none;
   outline: none;
   font-size: 0.95rem;
-  color: #3E2723;
+  color: #0B1A2E;
   font-family: 'Crimson Text', 'Georgia', serif;
   font-size: 1rem;
 }
 
 .login-field input::placeholder {
-  color: #b0956e;
+  color: #7A9AB8;
 }
 
 .show-pass-btn {
@@ -273,10 +273,10 @@
   margin: 0;
 }
 
-/* Botón */
+/* BotÃ³n */
 .btn-submit {
   padding: 14px;
-  background: linear-gradient(135deg, #D4AF37 0%, #8B6914 100%);
+  background: linear-gradient(135deg, #C9A84C 0%, #1E4D8C 100%);
   color: #fff;
   border: none;
   border-radius: 999px;
@@ -284,7 +284,7 @@
   font-weight: 700;
   font-family: 'Inter', sans-serif;
   cursor: pointer;
-  box-shadow: 0 6px 20px rgba(212,175,55,0.4);
+  box-shadow: 0 6px 20px rgba(201,168,76,0.4);
   transition: all 0.25s;
   letter-spacing: 2px;
   margin-top: 4px;
@@ -292,7 +292,7 @@
 
 .btn-submit:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 28px rgba(212,175,55,0.5);
+  box-shadow: 0 10px 28px rgba(201,168,76,0.5);
 }
 
 .btn-submit:active { transform: translateY(0); }
@@ -302,17 +302,17 @@
 .login-note {
   text-align: center;
   font-size: 0.8rem;
-  color: #8D6E63;
+  color: #4A6080;
   margin: 0;
   font-style: italic;
   font-family: 'Crimson Text', serif;
 }
 
-/* ── Recuperar contraseña ── */
+/* â”€â”€ Recuperar contraseÃ±a â”€â”€ */
 .link-recuperar {
   background: none;
   border: none;
-  color: #8B6914;
+  color: #1E4D8C;
   font-size: 0.88rem;
   cursor: pointer;
   text-align: center;
@@ -324,11 +324,11 @@
   padding: 0;
 }
 
-.link-recuperar:hover { color: #D4AF37; }
+.link-recuperar:hover { color: #C9A84C; }
 
 .rec-desc {
   text-align: center;
-  color: #8D6E63;
+  color: #4A6080;
   font-size: 0.92rem;
   font-family: 'Crimson Text', serif;
   font-style: italic;
@@ -336,7 +336,7 @@
   margin-bottom: 20px;
 }
 
-/* ── Enviado ── */
+/* â”€â”€ Enviado â”€â”€ */
 .enviado-wrap {
   text-align: center;
   padding: 8px 0;
@@ -359,12 +359,12 @@
 .enviado-wrap h3 {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.5rem;
-  color: #3E2723;
+  color: #0B1A2E;
   margin: 0;
 }
 
 .enviado-wrap p {
-  color: #8D6E63;
+  color: #4A6080;
   font-size: 0.92rem;
   font-family: 'Crimson Text', serif;
   line-height: 1.6;
@@ -372,4 +372,5 @@
   margin: 0;
 }
 
-.enviado-wrap strong { color: #5D4037; }
+.enviado-wrap strong { color: #112240; }
+

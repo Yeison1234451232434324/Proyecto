@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
 
 * {
   margin: 0;
@@ -30,7 +30,7 @@ html { scroll-behavior: smooth; }
 
 body {
   font-family: 'Crimson Text', 'Georgia', serif;
-  background: var(--cream);
+  background: #EEF3F8;
   color: var(--text);
   -webkit-font-smoothing: antialiased;
 }
@@ -41,7 +41,7 @@ body {
 ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 999px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--gold-dark); }
 
-/* Selección de texto */
+/* SelecciÃ³n de texto */
 ::selection { background: rgba(212,175,55,0.25); color: var(--brown-dark); }
 
 .loading-screen {
@@ -50,9 +50,9 @@ body {
   justify-content: center;
   height: 100vh;
   font-family: 'Cormorant Garamond', serif;
-  color: var(--gold-dark);
+  color: #1E4D8C;
   font-size: 1.3rem;
-  background: var(--cream);
+  background: #EEF3F8;
   gap: 12px;
 }
 
@@ -61,9 +61,10 @@ body {
   width: 20px;
   height: 20px;
   border: 3px solid var(--border);
-  border-top-color: var(--gold);
+  border-top-color: #C9A84C;
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
 }
 
 @keyframes spin { to { transform: rotate(360deg); } }
+
