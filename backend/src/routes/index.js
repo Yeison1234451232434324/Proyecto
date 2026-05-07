@@ -137,6 +137,16 @@ router.delete('/oracion/:id', async (req, res) => {
   res.json({ ok: true });
 });
 
+router.put('/oracion/:id', async (req, res) => {
+  const { contenido, versiculo } = req.body;
+  const updates = {};
+  if (contenido !== undefined) updates.contenido = contenido;
+  if (versiculo !== undefined) updates.versiculo = versiculo;
+  const { data, error } = await db.from('oraciones').update(updates).eq('id', req.params.id).select();
+  if (error) return res.status(500).json({ error: error.message });
+  res.json(data[0]);
+});
+
 // ── Usuarios
 router.get('/usuarios', async (req, res) => {
   const { data, error } = await db.from('usuarios').select('*, roles(nombre)');

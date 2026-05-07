@@ -25,7 +25,7 @@ const menuItems = [
 const views = {
   eventos: <PublicarEventos />,
   noticias: <PublicarNoticias />,
-  oracion: <OracionDia />,
+  oracion: <OracionDia isAdmin={true} />,
   recursos: <GestionRecursos />,
   calificar: <CalificarVoluntarios />,
   actividades: <Actividades />,

@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { useAuth } from './context/AuthContext';
 import Home from './pages/Home';
+import ResetPassword from './pages/ResetPassword';
 import AdminPanel from './pages/admin/AdminPanel';
 import ColaboradorPanel from './pages/colaborador/ColaboradorPanel';
 import VoluntarioPanel from './pages/voluntario/VoluntarioPanel';
@@ -27,6 +28,7 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/reset-password" element={<ResetPassword />} />
         <Route path="/dashboard" element={<RoleRedirect />} />
         <Route path="/admin/*" element={
           <ProtectedRoute allowedRoles={['administrador']}>
